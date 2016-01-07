@@ -108,14 +108,14 @@ end
 In zsh case, use builtin commands in the same way as fish shell:
 
 ```zsh
-getopts -ab1 --foo=bar baz | while read key option
-    case $key
-        _)  ;;
-        a)  ;;
-        b)  ;;
-        foo ;;
+getopts -ab1 --foo=bar baz | while read key option; do
+    case "$key" in
+        _)   ;;
+        a)   ;;
+        b)   ;;
+        foo) ;;
     esac
-end
+done
 ```
 
 ## Bugs
