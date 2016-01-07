@@ -105,6 +105,18 @@ end
 
 ### [zsh][zsh]
 
+In zsh case, use builtin commands in the same way as fish shell:
+
+```zsh
+getopts -ab1 --foo=bar baz | while read key option
+    case $key
+        _)  ;;
+        a)  ;;
+        b)  ;;
+        foo ;;
+    esac
+end
+```
 
 ## Bugs
 
