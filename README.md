@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="http://github.com/bucaran/fish-getopts">
-    <img alt="fish-getopts" width=500px  src="https://cloud.githubusercontent.com/assets/8317250/12137933/266fbd1e-b498-11e5-80cc-eb0389ad4d04.png">
+  <a href="http://github.com/bucaran/getopts">
+    <img alt="getopts" width=500px  src="https://cloud.githubusercontent.com/assets/8317250/12137933/266fbd1e-b498-11e5-80cc-eb0389ad4d04.png">
   </a>
 </p>
 
@@ -120,8 +120,8 @@ end
 * POSIX [Utility Syntax Guidelines](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html)<br>
 
 <!-- Links -->
-[travis-link]:  https://travis-ci.org/bucaran/fish-getopts
-[travis-badge]: https://img.shields.io/travis/bucaran/fish-getopts.svg?style=flat-square
+[travis-link]:  https://travis-ci.org/bucaran/getopts
+[travis-badge]: https://img.shields.io/travis/bucaran/getopts.svg?style=flat-square
 
 [fish]: https://github.com/fish-shell/fish-shell
 [zsh]: https://github.com/zsh-users/zsh
