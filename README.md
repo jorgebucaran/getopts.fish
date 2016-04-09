@@ -24,13 +24,11 @@ end
 
 ## Install
 
-**Getopts** is bundled by default with [Fisherman].
-
-If you are not using Fisherman, just drop getopts.fish in your ~/.config/fish/functions directory and you are done.
+Just drop getopts.fish in your ~/.config/fish/functions directory and you are done.
 
 ## Usage
 
-Study the output of the following example
+Study the output in the following example
 
 ```fish
 getopts -ab1 --foo=bar baz
