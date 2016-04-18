@@ -50,10 +50,6 @@ test "double w/ value"
     "foo bar" = (getopts --foo=bar)
 end
 
-test "double w/ negated value"
-    "foo bar !" = (getopts --foo!=bar)
-end
-
 test "double w/ value group"
     "foo bar" "bar foo" = (getopts --foo=bar --bar=foo)
 end
