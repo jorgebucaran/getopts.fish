@@ -24,7 +24,17 @@ end
 
 ## Install
 
-Just drop getopts.fish in your ~/.config/fish/functions directory and you are done.
+With [fin]:
+
+```
+fin getopts
+```
+
+With curl:
+
+```sh
+curl -Lo ~/.config/fish/functions/getopts.fish --create-dirs git.io/getopts
+```
 
 ## Usage
 
@@ -67,4 +77,4 @@ end
 [slack-badge]: https://img.shields.io/badge/slack-join%20the%20chat-00B9FF.svg?style=flat-square
 
 [fish]: https://github.com/fish-shell/fish-shell
-[Fisherman]: https://github.com/fisherman/fisherman
+[fin]: https://github.com/fisherman/fin
