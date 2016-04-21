@@ -24,10 +24,10 @@ end
 
 ## Install
 
-With [fin]:
+With [fisherman]:
 
 ```
-fin getopts
+fisher getopts
 ```
 
 With curl:
@@ -77,4 +77,4 @@ end
 [slack-badge]: https://img.shields.io/badge/slack-join%20the%20chat-00B9FF.svg?style=flat-square
 
 [fish]: https://github.com/fish-shell/fish-shell
-[fin]: https://github.com/fisherman/fin
+[fisherman]: https://github.com/fisherman/fisherman
