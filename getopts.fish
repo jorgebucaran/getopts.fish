@@ -19,7 +19,7 @@ function getopts -d "Command line options parser"
                   }
             }
 
-            !/^ *$/ {
+            {
                   if (done) {
                         out("_" , $1$2$3)
 
