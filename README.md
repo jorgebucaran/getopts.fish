@@ -73,6 +73,6 @@ end
 
 [slack-link]: https://fisherman-wharf.herokuapp.com
 [slack-badge]: https://fisherman-wharf.herokuapp.com/badge.svg
-[
+
 [fish-shell]: https://github.com/fish-shell/fish-shell
 [fisherman]: https://github.com/fisherman/fisherman
