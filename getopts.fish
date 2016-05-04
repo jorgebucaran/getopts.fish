@@ -9,6 +9,11 @@ function getopts -d "cli parser"
         }
 
         {
+            if (done) {
+                out("_" , $0)
+                next
+            }
+
             if (match($0, "^-[A-Za-z]+")) {
                 $0 = "- " substr($0, 2, RLENGTH - 1) " " substr($0, RLENGTH + 1)
 
@@ -16,10 +21,7 @@ function getopts -d "cli parser"
                 $0 = "-- " substr($0, 3, RLENGTH - 2) " " substr($0, RLENGTH + 2)
             }
 
-            if (done) {
-                out("_" , $1$2$3)
-
-            } else if ($1 == "--" && $2 == "") {
+            if ($1 == "--" && $2 == "") {
                 done = 1
 
             } else if ($2 == "" || $1 !~ /^-|^--/ ) {
