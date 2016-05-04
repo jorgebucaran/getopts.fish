@@ -1,9 +1,7 @@
 function getopts -d "Command line options parser"
       printf "%s\n" $argv | awk '
             function out(k,v) {
-                  if (!seen[k v]++) {
-                        print k (v == "" ? "" : " "v)
-                  }
+                  print k (v == "" ? "" : " "v)
             }
 
             function pop() {
