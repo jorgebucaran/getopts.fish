@@ -1,11 +1,9 @@
-<a name="getopts"></a>
-
 [![Build Status][travis-badge]][travis-link]
 [![Slack Room][slack-badge]][slack-link]
 
 # Getopts
 
-**Getopts** is a command line options parser for [fish].
+**Getopts** is a command line options parser for [fish-shell].
 
 ```fish
 getopts -ab1 --foo=bar baz | while read -l key value
@@ -24,13 +22,13 @@ end
 
 ## Install
 
-With [fisherman]:
+With [fisherman].
 
 ```
 fisher getopts
 ```
 
-With curl:
+With curl.
 
 ```sh
 curl -Lo ~/.config/fish/functions/getopts.fish --create-dirs git.io/getopts
@@ -71,10 +69,10 @@ end
 * A double dash, `--`, marks the end of options. Arguments after this sequence are placed in the default underscore key, `_`.
 
 [travis-link]: https://travis-ci.org/fisherman/getopts
-[travis-badge]: https://img.shields.io/travis/fisherman/getopts.svg?style=flat-square
+[travis-badge]: https://img.shields.io/travis/fisherman/getopts.svg
 
-[slack-link]: https://fisherman-wharf.herokuapp.com/
-[slack-badge]: https://img.shields.io/badge/slack-join%20the%20chat-00B9FF.svg?style=flat-square
-
-[fish]: https://github.com/fish-shell/fish-shell
+[slack-link]: https://fisherman-wharf.herokuapp.com
+[slack-badge]: https://fisherman-wharf.herokuapp.com/badge.svg
+[
+[fish-shell]: https://github.com/fish-shell/fish-shell
 [fisherman]: https://github.com/fisherman/fisherman
