@@ -102,7 +102,3 @@ end
 test "double and empty string"
     "foo" = (getopts --foo "")
 end
-
-test "ignore repeated options"
-    "x" = (getopts -xxx | xargs)
-end
