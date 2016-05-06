@@ -1,7 +1,7 @@
 function getopts -d "cli parser"
     printf "%s\n" $argv | awk '
         function out(k,v) {
-            print(k (v == "" ? "" : " "v))
+            print(k "" (v == "" ? "" : " "v))
         }
 
         function pop() {
