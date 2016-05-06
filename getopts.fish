@@ -1,7 +1,7 @@
 function getopts -d "cli parser"
-      printf "%s\n" $argv | awk '
+    printf "%s\n" $argv | awk '
         function out(k,v) {
-            print k (v == "" ? "" : " "v)
+            print(k (v == "" ? "" : " "v))
         }
 
         function pop() {
@@ -48,7 +48,7 @@ function getopts -d "cli parser"
 
                 if ($1 == "-") {
                     if ($2 == "") {
-                        print $1
+                        print($1)
                         next
 
                     } else {
