@@ -3,7 +3,7 @@
 
 # Getopts
 
-**Getopts** is a command line options parser for [fish-shell].
+**Getopts** is a command line options parser for [fish].
 
 ```fish
 getopts -ab1 --foo=bar baz | while read -l key value
@@ -74,5 +74,5 @@ end
 [slack-link]: https://fisherman-wharf.herokuapp.com
 [slack-badge]: https://fisherman-wharf.herokuapp.com/badge.svg
 
-[fish-shell]: https://github.com/fish-shell/fish-shell
+[fish]: https://github.com/fish-shell/fish-shell
 [fisherman]: https://github.com/fisherman/fisherman
