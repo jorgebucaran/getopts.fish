@@ -22,7 +22,7 @@ end
 
 ## Install
 
-With [fisherman].
+With [fisherman]
 
 ```
 fisher getopts
@@ -74,5 +74,5 @@ end
 [slack-link]: https://fisherman-wharf.herokuapp.com
 [slack-badge]: https://fisherman-wharf.herokuapp.com/badge.svg
 
-[fish]: https://github.com/fish-shell/fish-shell
+[fish]: https://fishshell.com
 [fisherman]: https://github.com/fisherman/fisherman
