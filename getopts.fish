@@ -1,4 +1,8 @@
 function getopts -d "cli parser"
+    if not set -q argv[1]
+        return
+    end
+
     printf "%s\n" $argv | awk '
         function out(k,v) {
             print(k "" (v == "" ? "" : " "v))
