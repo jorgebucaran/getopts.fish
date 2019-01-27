@@ -1,6 +1,6 @@
 # fish-getopts
 
-fish-getopts is a command line options parser for [fish].
+fish-getopts is a command line options parser for the [fish shell](https://fishshell.com).
 
 ```fish
 getopts -ab1 --foo=bar baz | while read -l key value
