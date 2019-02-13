@@ -37,7 +37,7 @@ To uninstall, remove the file.
 
 The `getopts` command splits your arguments into key-value records you can read into variables. The command line arguments passed to a function or a script can be found in the special variable `$argv`. If `getopts` is run without any arguments, it will exit with status `1`.
 
-```console
+```fish
 $ engage --quadrant=delta -w9 <coordinates
 ```
 
