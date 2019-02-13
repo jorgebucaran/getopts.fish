@@ -75,11 +75,11 @@ function engage -d "activate the warp drive"
 end
 ```
 
-### Parsing Rules
+## Parsing Rules
 
 Getopts follows the [POSIX Utility Syntax Guidelines](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html#tag_12_02). This section defines short and long options, operands, and the rules that determine parsing behavior with examples.
 
-#### Short Options
+### Short Options
 
 - A short option consists of a hyphen `-` followed by a single alphabetic character. Multiple short options can be clustered together without spaces. A short option will be `true` unless followed by an [operand](#operand) or if immediately adjacent to one or more non-alphabetic characters matching the regular expression <code>/!-@[-`{-~/</code>.
 
@@ -114,7 +114,7 @@ Getopts follows the [POSIX Utility Syntax Guidelines](http://pubs.opengroup.org/
   / 0.01
   ```
 
-#### Long Options
+### Long Options
 
 - A long option consists of two hyphens `--` followed by one or more characters. Any character, including symbols, and numbers can be used to create a long option except for the `=` symbol, which separates the option's key and value.
 
@@ -134,7 +134,7 @@ Getopts follows the [POSIX Utility Syntax Guidelines](http://pubs.opengroup.org/
   -- alpha
   ```
 
-#### Operands
+### Operands
 
 - Every non-option, standalone argument is treated as an operand, and its key will be an underscore `_`.
 
