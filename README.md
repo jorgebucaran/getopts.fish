@@ -105,7 +105,7 @@ Getopts follows the [POSIX Utility Syntax Guidelines](http://pubs.opengroup.org/
   d true
   ```
 
-- Symbols, numbers and other non-alphabetic characters can be used as an option, if they're the first character after a hyphen.
+- Symbols, numbers and other non-alphabetic characters can be used as an option if they're the first character after a hyphen.
 
   ```console
   $ getopts -9 -@10 -/0.01
@@ -136,7 +136,7 @@ Getopts follows the [POSIX Utility Syntax Guidelines](http://pubs.opengroup.org/
 
 ### Operands
 
-- Every non-option, standalone argument is treated as an operand, and its key will be an underscore `_`.
+- Every non-option standalone argument will be treated as an operand, and its key will be an underscore `_`.
 
   ```console
   $ getopts alpha -w9
