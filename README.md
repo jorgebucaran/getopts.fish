@@ -1,9 +1,8 @@
-# fish-getopts
+# fish-getopts [![Releases](https://img.shields.io/github/release/jorgebucaran/fish-getopts.svg?label=&color=0080FF)](https://github.com/jorgebucaran/fish-getopts/releases/latest) [![Travis CI](https://img.shields.io/travis/jorgebucaran/fish-getopts.svg?label=)](https://travis-ci.org/jorgebucaran/fish-getopts)
 
-[![Build Status](https://img.shields.io/travis/jorgebucaran/fish-getopts.svg)](https://travis-ci.org/jorgebucaran/fish-getopts)
-[![Releases](https://img.shields.io/github/release/jorgebucaran/fish-getopts.svg?label=latest)](https://github.com/jorgebucaran/fish-getopts/releases)
+> Parse CLI options in fish without a hitch.
 
-Getopts is a CLI options parser for the <a href="https://fishshell.com" title="friendly interactive shell">fish shell</a>. You can use it as an alternative to the [`argparse`](https://fishshell.com/docs/current/commands.html#argparse) builtin to process the [command line arguments](https://en.wikipedia.org/wiki/Command-line_interface#Arguments) passed to your programs without learning a domain specific language. No implicit variables, complex option spec, or companion commands.
+Getopts is a CLI options parser for the <a href="https://fishshell.com" title="friendly interactive shell">fish shell</a> based on the [POSIX Utility Syntax Guidelines](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html#tag_12_02). Think of it as [`argparse`](https://fishshell.com/docs/current/commands.html#argparse) but without the domain specific language, implicit variables, complex option spec, or companion commands.
 
 ## Installation
 
@@ -25,7 +24,7 @@ set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
 curl https://git.io/getopts.fish --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/getopts.fish
 ```
 
-To uninstall, remove the file.
+To uninstall it, remove `getopts.fish`.
 
 </details>
 
@@ -35,10 +34,10 @@ To uninstall, remove the file.
 
 ## Usage
 
-The `getopts` command splits your arguments into key-value records you can read into variables. The command line arguments passed to a function or a script can be found in the special variable `$argv`. If `getopts` is run without any arguments, it will exit with status `1`.
+The `getopts` command splits your arguments into key-value records that can be read into variables.
 
 ```fish
-$ engage --quadrant=delta -w9 <coordinates
+$ engage --quadrant=delta -w9 <coordinates.dat
 ```
 
 ```fish
@@ -77,95 +76,93 @@ end
 
 ## Parsing Rules
 
-Getopts follows the [POSIX Utility Syntax Guidelines](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html#tag_12_02). This section defines short and long options, operands, and the rules that determine parsing behavior with examples.
-
 ### Short Options
 
-- A short option consists of a hyphen `-` followed by a single alphabetic character. Multiple short options can be clustered together without spaces. A short option will be `true` unless followed by an [operand](#operand) or if immediately adjacent to one or more non-alphabetic characters matching the regular expression <code>/!-@[-`{-~/</code>.
+A short option consists of a hyphen `-` followed by a single alphabetic character. Multiple short options can be clustered together without spaces. A short option will be `true` unless followed by an [operand](#operand) or if immediately adjacent to one or more non-alphabetic characters matching the regular expression <code>/!-@[-`{-~/</code>.
 
-  ```console
-  $ getopts -ab -c
-  a true
-  b true
-  c true
-  ```
+```console
+$ getopts -ab -c
+a true
+b true
+c true
+```
 
-  ```console
-  $ getopts -a alppha
-  a alpha
-  ```
+```console
+$ getopts -a alppha
+a alpha
+```
 
-- The argument following a short or a long option (which is not an option itself) will be parsed as its value. That means only the last character in a cluster of options can receive a value other than `true`.
+The argument following a short or a long option (which is not an option itself) will be parsed as its value. That means only the last character in a cluster of options can receive a value other than `true`.
 
-  ```console
-  $ getopts -ab1 -c -d
-  a true
-  b 1
-  c true
-  d true
-  ```
+```console
+$ getopts -ab1 -c -d
+a true
+b 1
+c true
+d true
+```
 
-- Symbols, numbers and other non-alphabetic characters can be used as an option if they're the first character after a hyphen.
+Symbols, numbers and other non-alphabetic characters can be used as an option if they're the first character after a hyphen.
 
-  ```console
-  $ getopts -9 -@10 -/0.01
-  9 true
-  @ 10
-  / 0.01
-  ```
+```console
+$ getopts -9 -@10 -/0.01
+9 true
+@ 10
+/ 0.01
+```
 
 ### Long Options
 
-- A long option consists of two hyphens `--` followed by one or more characters. Any character, including symbols, and numbers can be used to create a long option except for the `=` symbol, which separates the option's key and value.
+A long option consists of two hyphens `--` followed by one or more characters. Any character, including symbols, and numbers can be used to create a long option except for the `=` symbol, which separates the option's key and value.
 
-  ```console
-  $ getopts --turbo --warp=10
-  turbo true
-  warp 10
-  ```
+```console
+$ getopts --turbo --warp=10
+turbo true
+warp 10
+```
 
-  ```console
-  $ getopts --warp=e=mc\^2
-  warp e=mc^2
-  ```
+```console
+$ getopts --warp=e=mc\^2
+warp e=mc^2
+```
 
-  ```console
-  $ getopts ---- alpha
-  -- alpha
-  ```
+```console
+$ getopts ---- alpha
+-- alpha
+```
 
 ### Operands
 
-- Every non-option standalone argument will be treated as an operand, and its key will be an underscore `_`.
+Every non-option standalone argument will be treated as an operand, and its key will be an underscore `_`.
 
-  ```console
-  $ getopts alpha -w9
-  _ alpha
-  w 9
-  ```
+```console
+$ getopts alpha -w9
+_ alpha
+w 9
+```
 
-  ```console
-  $ getopts --code=alpha beta
-  code alpha
-  _ beta
-  ```
+```console
+$ getopts --code=alpha beta
+code alpha
+_ beta
+```
 
-- Every argument after the first double-hyphen sequence `--` will be treated as an operand.
+Every argument after the first double-hyphen sequence `--` will be treated as an operand.
 
-  ```console
-  $ getopts --alpha -- --beta gamma
-  alpha true
-  _ --beta
-  _ gamma
-  ```
+```console
+$ getopts --alpha -- --beta gamma
+alpha true
+_ --beta
+_ gamma
+```
 
-* A single hyphen `-` is always an operand.
+A single hyphen `-` is always an operand.
 
-  ```console
-  $ getopts --alpha -
-  alpha true
-  _ -
-  ```
+```console
+$ getopts --alpha -
+alpha true
+_ -
+```
 
 ## License
 
