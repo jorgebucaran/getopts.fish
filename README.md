@@ -1,6 +1,6 @@
 # fish-getopts [![Releases](https://img.shields.io/github/release/jorgebucaran/fish-getopts.svg?label=&color=0080FF)](https://github.com/jorgebucaran/fish-getopts/releases/latest) [![Travis CI](https://img.shields.io/travis/jorgebucaran/fish-getopts.svg?label=)](https://travis-ci.org/jorgebucaran/fish-getopts)
 
-> Parse CLI options in fish without a hitch.
+> Parse CLI options in fish.
 
 Getopts is a CLI options parser for the <a href="https://fishshell.com" title="friendly interactive shell">fish shell</a> based on the [POSIX Utility Syntax Guidelines](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html#tag_12_02). Think of it as [`argparse`](https://fishshell.com/docs/current/commands.html#argparse) but without the domain specific language, implicit variables, complex option spec, or companion commands.
 
