@@ -1,4 +1,4 @@
-# fish-getopts [![Releases](https://img.shields.io/github/release/jorgebucaran/fish-getopts.svg?label=&color=0080FF)](https://github.com/jorgebucaran/fish-getopts/releases/latest)
+# fish-getopts [![Releases](https://img.shields.io/github/release/jorgebucaran/fish-getopts.svg?label=&color=0366d6)](https://github.com/jorgebucaran/fish-getopts/releases/latest)
 
 > Parse CLI options in fish.
 
