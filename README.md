@@ -8,7 +8,7 @@ Getopts is a CLI options parser for the <a href="https://fishshell.com" title="f
 
 Install with [Fisher](https://github.com/jorgebucaran/fisher) (recommended):
 
-```
+```console
 fisher add jorgebucaran/fish-getopts
 ```
 
