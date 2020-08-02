@@ -1,38 +1,31 @@
-# fish-getopts [![Releases](https://img.shields.io/github/release/jorgebucaran/fish-getopts.svg?label=&color=0366d6)](https://github.com/jorgebucaran/fish-getopts/releases/latest)
+# getopts.fish
 
 > Parse CLI options in fish.
 
-Getopts is a CLI options parser for the <a href="https://fishshell.com" title="friendly interactive shell">fish shell</a> based on the [POSIX Utility Syntax Guidelines](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html#tag_12_02). Think of it as [`argparse`](https://fishshell.com/docs/current/commands.html#argparse) but without the domain specific language, implicit variables, complex option spec, or companion commands.
+Getopts is a CLI options parser for <a href="https://fishshell.com" title="friendly interactive shell">fish</a> based on the [POSIX Utility Syntax Guidelines](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html#tag_12_02). This is like [`argparse`](https://fishshell.com/docs/current/commands.html#argparse) without the domain specific language, implicit variables, complex option spec, or companion commands.
 
 ## Installation
 
 Install with [Fisher](https://github.com/jorgebucaran/fisher) (recommended):
 
 ```console
-fisher add jorgebucaran/fish-getopts
+fisher add jorgebucaran/getopts.fish
 ```
 
 <details>
 <summary>Not using a package manager?</summary>
 
----
+###
 
 Copy [`getopts.fish`](getopts.fish) to any directory on your function path.
 
 ```fish
-set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
-curl https://git.io/getopts.fish --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/getopts.fish
+curl https://git.io/getopts.fish --create-dirs -sLo ~/.config/fish/functions/getopts.fish
 ```
-
-To uninstall it, remove `getopts.fish`.
 
 </details>
 
-### System Requirements
-
-- [fish](https://github.com/fishshell) 2.0+
-
-## Usage
+## Getting Started
 
 The `getopts` command splits your arguments into key-value records that can be read into variables.
 
