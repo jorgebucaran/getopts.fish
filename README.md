@@ -25,7 +25,7 @@ curl https://git.io/getopts.fish --create-dirs -sLo ~/.config/fish/functions/get
 
 </details>
 
-## Getting Started
+## Quickstart
 
 The `getopts` command splits your arguments into key-value records that can be read into variables.
 
