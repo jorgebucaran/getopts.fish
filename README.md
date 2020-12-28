@@ -1,29 +1,16 @@
 # getopts.fish
 
-> Parse CLI options in fish.
+> Parse CLI options in Fish.
 
-Getopts is a CLI options parser for <a href="https://fishshell.com" title="friendly interactive shell">fish</a> based on the [POSIX Utility Syntax Guidelines](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html#tag_12_02). This is like [`argparse`](https://fishshell.com/docs/current/commands.html#argparse) without the domain specific language, implicit variables, complex option spec, or companion commands.
+Getopts is a CLI options parser for [Fish](https://fishshell.com) based on the [POSIX Utility Syntax Guidelines](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html#tag_12_02). Think [`argparse`](https://fishshell.com/docs/current/commands.html#argparse) without the domain specific language, implicit variables, complex option spec, or companion commands.
 
 ## Installation
 
-Install with [Fisher](https://github.com/jorgebucaran/fisher) (recommended):
+Install with [Fisher](https://github.com/jorgebucaran/fisher):
 
 ```console
-fisher add jorgebucaran/getopts.fish
+fisher install jorgebucaran/getopts.fish
 ```
-
-<details>
-<summary>Not using a package manager?</summary>
-
-###
-
-Copy [`getopts.fish`](getopts.fish) to any directory on your function path.
-
-```fish
-curl https://git.io/getopts.fish --create-dirs -sLo ~/.config/fish/functions/getopts.fish
-```
-
-</details>
 
 ## Quickstart
 
