@@ -1,9 +1,5 @@
-set -g getopts_version 1.0.0
-
-function getopts -d "CLI options parser"
-    if not set -q argv[1]
-        return 1
-    end
+function getopts --description "Parse CLI options"
+    set --query argv[1] || return
     printf "%s\n" $argv | command awk '
         { argv[n++] = $0 }
         END {
