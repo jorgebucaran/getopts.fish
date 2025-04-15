@@ -58,7 +58,7 @@ end
 
 ### Short Options
 
-A short option consists of a hyphen `-` followed by a single alphabetic character. Multiple short options can be clustered together without spaces. A short option will be `true` unless followed by an [operand](#operand) or if immediately adjacent to one or more non-alphabetic characters matching the regular expression <code>/!-@[-`{-~/</code>.
+A short option consists of a hyphen `-` followed by a single alphabetic character. Multiple short options can be clustered together without spaces. A short option will be `true` unless followed by an [operand](#operands) or if immediately adjacent to one or more non-alphabetic characters matching the regular expression <code>/!-@[-`{-~/</code>.
 
 ```console
 $ getopts -ab -c
